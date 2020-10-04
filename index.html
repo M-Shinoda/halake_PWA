@@ -71,26 +71,10 @@
     <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
   </ons-splitter>
   <!-- 左上メニューここまで -->
-
-  <!-- 下タブバーここから -->
-  <ons-page>
-    <ons-toolbar>
-      <div class="center">Tab 1</div>
-    </ons-toolbar>
   
-    <ons-tabbar swipeable position="auto">
-      <ons-tab page="home.html" label="Tab 1" icon="ion-home, material:md-home" active>
-      </ons-tab>
-      <ons-tab page="calc.html" label="Tab 2" icon="ion-home, material:md-home">
-      </ons-tab>
-      <ons-tab page="about.html" label="Tab 3" icon="md-settings" active-icon="md-face">
-      </ons-tab>
-    </ons-tabbar>
-  </ons-page>
-  <!--  下タブバーここまで-->
   <!-- 左上メニュー各遷移先ページここから -->
   <template id="home.html">
-    <ons-page id="Tab 1">
+    <ons-page>
       <ons-toolbar>
         <div class="left">
           <ons-toolbar-button onclick="fn.open()">
@@ -108,7 +92,7 @@
   </template>
   
   <template id="calc.html">
-    <ons-page id="TAb 2">
+    <ons-page>
       <ons-toolbar>
         <div class="left">
           <ons-toolbar-button onclick="fn.open()">
@@ -160,7 +144,7 @@
   </template>
   
   <template id="about.html">
-    <ons-page id="Tab 3">
+    <ons-page>
       <ons-toolbar>
         <div class="left">
           <ons-toolbar-button onclick="fn.open()">
