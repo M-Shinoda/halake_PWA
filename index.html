@@ -9,13 +9,34 @@
    }
   </script>
   <!-- ここまで必須 -->
-
+  <meta charset="utf-8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="HaLaKe PWAv2">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <link rel="apple-touch-icon" href="img/halake_logo120.png" sizes="120x120">
   <link rel="apple-touch-icon" href="img/halake_logo192.png" sizes="192x192">
+
+  <!-- Onsen UI 2 -->
+  <link rel="stylesheet" href="OnsenUI-dist-2.11.1/css/onsenui.css" />
+  <link rel="stylesheet" href="OnsenUI-dist-2.11.1/css/onsen-css-components.css" />
+  <script src="OnsenUI-dist-2.11.1/js/onsenui.min.js"></script>
+
+  <script>
+    window.fn = {};
+
+    window.fn.open = function() {
+    var menu = document.getElementById('menu');
+    menu.open();
+    };
+
+    window.fn.load = function(page) {
+    var content = document.getElementById('content');
+    var menu = document.getElementById('menu');
+    content.load(page)
+        .then(menu.close.bind(menu));
+    };
+</script>
 
   <title>Hello PWA.</title>
   <style>
@@ -33,12 +54,71 @@
   <!-- <link rel="stylesheet" type="text/css" href="halake.css"> -->
 </head>
 <body>
-  <h1>Hello PWA.</h1>
-  <img src="img/halake_logo192.png" alt="logo" class="image" />
-  <script>
-  </script>
-  <a href="calculator.html">calculato</a>
-  <a href="test.html">navigation_test</a>
-  <a href="test2.html">splitter-side_test</a>
+  <ons-splitter>
+    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+      <ons-page>
+        <ons-list>
+          <ons-list-item onclick="fn.load('home.html')" tappable>
+            Home
+          </ons-list-item>
+          <ons-list-item onclick="fn.load('settings.html')" tappable>
+            Settings
+          </ons-list-item>
+          <ons-list-item onclick="fn.load('about.html')" tappable>
+            About
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+    <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+  </ons-splitter>
+  
+  <template id="home.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          Main
+        </div>
+      </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+        Swipe right to open the menu!
+      </p>
+    </ons-page>
+  </template>
+  
+  <template id="settings.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          Settings
+        </div>
+      </ons-toolbar>
+    </ons-page>
+  </template>
+  
+  <template id="about.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          About
+        </div>
+      </ons-toolbar>
+    </ons-page>
+  </template>
 </body>
 </html>
