@@ -7,6 +7,18 @@
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
    }
+
+   document.addEventListener('init', function(event) {
+  var page = event.target;
+
+  if (page.id === 'page1') {
+    page.querySelector('#push-button').onclick = function() {
+      document.querySelector('#myNavigator').pushPage('page2.html', {data: {title: 'Page 2'}});
+    };
+  } else if (page.id === 'page2') {
+    page.querySelector('ons-toolbar .center').innerHTML = page.data.title;
+  }
+});
   </script>
   <!-- ここまで必須 -->
 
@@ -33,11 +45,36 @@
   <!-- <link rel="stylesheet" type="text/css" href="halake.css"> -->
 </head>
 <body>
-  <h1>Hello PWA.</h1>
+  <!-- <h1>Hello PWA.</h1>
   <img src="img/halake_logo192.png" alt="logo" class="image" />
   <script>
   </script>
   <a href="calculator.html">calculato</a>
-  <a href="test.html">test</a>
+  <a href="test.html">test</a> -->
+
+  <ons-navigator swipeable id="myNavigator" page="page1.html"></ons-navigator>
+
+  <template id="page1.html">
+    <ons-page id="page1">
+      <ons-toolbar>
+        <div class="center">Page 1</div>
+      </ons-toolbar>
+
+      <p>This is the first page.</p>
+
+      <ons-button id="push-button">Push page</ons-button>
+    </ons-page>
+  </template>
+
+  <template id="page2.html">
+    <ons-page id="page2">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>Page 1</ons-back-button></div>
+        <div class="center"></div>
+      </ons-toolbar>
+
+      <p>This is the second page.</p>
+    </ons-page>
+  </template>
 </body>
 </html>
