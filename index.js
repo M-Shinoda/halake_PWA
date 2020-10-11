@@ -22,7 +22,6 @@ $(function() {
       $(".box2").css("background-color", color);
     });
     $(".change3").on('click',function() {
-      // cssで背景色をデフォルトに変更
       $(".box3").css("background-color", color);
     });
   });
