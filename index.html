@@ -1,4 +1,4 @@
-<html>
+<!doctype html>
 <head>
   <!-- manifest.jsonを呼び出しています(ここから) -->
   <link rel="manifest" href="./manifest.json">
@@ -17,25 +17,26 @@
   <link rel="apple-touch-icon" href="img/halake_logo120.png" sizes="120x120">
   <link rel="apple-touch-icon" href="img/halake_logo192.png" sizes="192x192">
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <title>Hello PWA.</title>
-  <style>
-    body {
-      text-align:center;
-      font-size: 5vmin;
-      vertical-align: middle;
-    }
-    .image {
-      width: 80%; 
-      margin: auto;
-      display: block;
-    }
-  </style>
-  <!-- <link rel="stylesheet" type="text/css" href="halake.css"> -->
 </head>
+
 <body>
-  <h1>Hello PWA.</h1>
-  <img src="img/halake_logo192.png" alt="logo" class="image" />
-  <script>
-  </script>
+  <h1 class="text-center">HaLaKe PWA</h1>
+  <div class="container" style="background-color: skyblue;">
+    <h2>バイブレーション機能を試してみよう</h2>
+  </div>
+  <div class="container-fluid" style="background-color: pink; ">
+    <h2>container-fluid</h2>
+  </div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- my scrypt -->
+<script src="index.js" charset="utf-8"></script>
 </body>
 </html>
