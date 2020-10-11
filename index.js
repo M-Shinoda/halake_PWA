@@ -1,15 +1,5 @@
 document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 
-
-window.addEventListener('touchmove', event => {
-    event.preventDefault();
-}, true);
-
-// スクロールを無効にする
-$(window).on('touchmove.noScroll', function(e) {
-    e.preventDefault();
-});
-
 $(".vibrate1").on('click',function(){
     //  1 秒振動
     navigator.vibrate(1000);
