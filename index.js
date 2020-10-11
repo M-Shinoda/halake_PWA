@@ -10,17 +10,13 @@ $('.dropdown-item').on('click', function(){
 });
 
 $(function() {
-    $(".change1").click(function() {
-      // cssで背景色をブルーに変更
+    $(".change1").on('click',function() {
       $(".box1").css("background-color", color);
     });
-    // ピンク
-    $(".change2").click(function() {
-      // cssで背景色をピンクに変更
+    $(".change2").on('click',function() {
       $(".box2").css("background-color", color);
     });
-    // リセット
-    $(".change3").click(function() {
+    $(".change3").on('click',function() {
       // cssで背景色をデフォルトに変更
       $(".box3").css("background-color", color);
     });
