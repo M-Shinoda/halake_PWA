@@ -1,4 +1,6 @@
+// 表示がおかしい時はこれを消す
 document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
+// ここまで
 
 $(".vibrate1").on('click',function(){
     //  1 秒振動
