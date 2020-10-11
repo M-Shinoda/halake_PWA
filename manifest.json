@@ -11,5 +11,5 @@
         }
     ],
     "start_url": "/halake_PWA/",
-    "display": "standalone"
+    "display" : "standalone"
 }
