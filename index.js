@@ -1,4 +1,4 @@
-// 表示がおかしい時はこれを消す
+// 表示がおかしい時はこれを消す(IOSの画面固定用)
 document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 // ここまで
 
