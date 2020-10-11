@@ -1,3 +1,7 @@
+window.addEventListener('touchmove', event => {
+    event.preventDefault();
+}, true);
+
 // スクロールを無効にする
 $(window).on('touchmove.noScroll', function(e) {
     e.preventDefault();
