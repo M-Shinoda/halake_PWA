@@ -1,3 +1,8 @@
+// スクロールを無効にする
+$(window).on('touchmove.noScroll', function(e) {
+    e.preventDefault();
+});
+
 $(".vibrate1").on('click',function(){
     //  1 秒振動
     navigator.vibrate(1000);
