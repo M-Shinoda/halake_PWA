@@ -6,6 +6,7 @@ $(".vibrate1").on('click',function(){
 var color = ''
 $('.dropdown-item').on('click', function(){
     color =  $(this).data('id');
+    $("show_color").text(color);
 });
 
 $(function() {
