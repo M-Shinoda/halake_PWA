@@ -1,20 +1,19 @@
 <!doctype html>
 <head>
-  <!-- manifest.jsonを呼び出しています(ここから) -->
+  <!-- ここから -->
   <link rel="manifest" href="./manifest.json">
   <script>
-    // service workerが有効なら、service-worker.js を登録します
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
    }
   </script>
   <!-- ここまで必須 -->
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="HaLaKePWA">
+  <meta name="apple-mobile-web-app-capable" content="yes"><!-- SafariのURLバーを消す -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><!-- IOSステータスバーの表示形式の指定 -->
+  <meta name="apple-mobile-web-app-title" content="HaLaKe"><!-- タイトル -->
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-  <link rel="apple-touch-icon" href="img/halake_logo120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="img/halake_logo120.png" sizes="120x120"><!-- IOSのアイコン指定、複数指定で -->
   <link rel="apple-touch-icon" href="img/halake_logo192.png" sizes="192x192">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,11 +21,7 @@
   <title>Hello PWA.</title>
 </head>
 
-<style>
-
-</style>
 <body>
-  
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
