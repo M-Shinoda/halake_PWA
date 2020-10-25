@@ -1,5 +1,5 @@
 // 表示がおかしい時はこれを消す(IOSの画面固定用)
-document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
+// document.addEventListener('touchmove', function(e) {e.preventDefault();}, {passive: false});
 // ここまで
 
 $(".vibrate1").on('click',function(){
