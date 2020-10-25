@@ -10,6 +10,11 @@
             "type": "image/png"
         }
     ],
+<<<<<<< HEAD
     "start_url": "/PWA_template/",
     "display": "fullscreen"
+=======
+    "start_url": "/halake_PWA/",
+    "display" : "standalone"
+>>>>>>> dev_jq_bs2
 }

@@ -1,4 +1,4 @@
-<html>
+<!doctype html>
 <head>
   <!-- ここから -->
   <link rel="manifest" href="./manifest.json">
@@ -16,24 +16,93 @@
   <link rel="apple-touch-icon" href="img/halake_logo120.png" sizes="120x120"><!-- IOSのアイコン指定、複数指定で -->
   <link rel="apple-touch-icon" href="img/halake_logo192.png" sizes="192x192">
 
-  <!-- ここから -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   <title>Hello PWA.</title>
-  <style>
-    body {
-      text-align:center;
-      font-size: 5vmin;
-      vertical-align: middle;
-    }
-    .image {
-      width: 80%; 
-      margin: auto;
-      display: block;
-    }
-  </style>
 </head>
+
 <body>
-  <h1>Hello PWA.</h1>
-  <img src="img/halake_logo192.png" alt="logo" class="image" />
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h1 class="text-center">HaLaKe PWA</h1>
+  <div class="container-fluid" style="background-color: Gray; ">
+    <h2>Vibration Demo</h2>
+    <div class="row">
+      <div class="col-md-2 offset-md-5 text-center" style="line-height: 100px;">
+        <button type="button" class="btn btn-primary vibrate1">Vibrate!</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background-color: orange; line-height: 100px;">
+    <div class="row">
+      <div class="col box1">
+        <br></br>
+      </div>
+      <div class="col box2">
+        <br></br>
+      </div>
+      <div class="col box3">
+        <br></br>
+      </div>
+    </div>
+  </div>
+  <br></br>
+  <div class="dropdown text-center">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <p class="show_color">Select Collor</p>
+    </button>
+    
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" data-id="red">Red</a>
+      <a class="dropdown-item" data-id="yellow">Yellow</a>
+      <a class="dropdown-item" data-id="green">Green</a>
+      <a class="dropdown-item" data-id="white">White</a>
+    </div>
+  </div>
+  <br></br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary change1">Change!</button>
+      </div>
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary change2">Change!</button>
+      </div>
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary change3">Change!</button>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- my scrypt -->
+<script src="index.js" charset="utf-8"></script>
 </body>
 <!-- ここまではテスト用 -->
 </html>
